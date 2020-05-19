@@ -1,4 +1,4 @@
-# Python Programming (with a change here from Jim)
+# Python Programming (with a 2nd! change here from Jim)
 
 Here you can find the labs for our CodingNomads online Python Programming course.
 
