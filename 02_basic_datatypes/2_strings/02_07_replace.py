@@ -8,3 +8,8 @@ Result: #ore python progra##ing please
 
 '''
 
+words = input('Please enter your string of words: ')
+symbol = input('Please enter a symbol: ')
+
+words2 = words.replace(words[0], symbol)
+print('New string of words:\n', words2)

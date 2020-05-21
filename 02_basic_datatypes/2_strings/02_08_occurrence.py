@@ -7,3 +7,9 @@ Letter input: o
 Result: 4
 
 '''
+
+string = input('String input: ')
+letter = input('Letter input: ')
+result = string.find(letter)
+result2 = string.index(letter)
+print('Index of first occurence of letter in string: \n', result)
