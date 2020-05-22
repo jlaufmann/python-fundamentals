@@ -8,8 +8,8 @@ Result: 4
 
 '''
 
-string = input('String input: ')
-letter = input('Letter input: ')
+string = input('String input: ').lower()
+letter = input('Letter input: ').lower()
 result = string.find(letter)
 result2 = string.index(letter)
 print('Index of first occurence of letter in string: \n', result)
