@@ -7,6 +7,16 @@ CHALLENGE: Can you change the script so that it counts the occurrence of each in
 
 '''
 string = input('Enter your string: ').lower()
+
+'''
+# Contained here is an improved method I discovered later
+a_count = string.count('a')
+e_count = string.count('e')
+i_count = string.count('i')
+o_count = string.count('o')
+u_count = string.count('u')
+'''
+
 a_count, e_count, i_count, o_count, u_count = 0, 0, 0, 0, 0
 
 for letter in string:
