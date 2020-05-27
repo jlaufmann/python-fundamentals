@@ -7,3 +7,18 @@ Example input:  1,2,3,4,5,6,7,8,9,10
 Example output: 2,4,6,8,10,9,7,5,3,1
 
 '''
+
+num_string = input("Enter 10 numbers separated by commas: ")
+nums = num_string.split(',')
+if len(nums) != 10:
+    print("Numbers entered incorrectly, or not 10 numbers")
+    quit()
+
+nums1 = nums[1:11:2] + nums[-2::-2]
+
+print("Re-ordered List: ", end='')
+for num in nums1:
+    if num != nums1[-1]:
+        print(f"{num},", end='')
+    else:
+        print(f"{num}")
