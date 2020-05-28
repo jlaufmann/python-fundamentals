@@ -2,15 +2,20 @@
 Write a script that takes a tuple and turns it into a list.
 
 '''
-# This needs work.....................
-string_in = input("Please input your tuple: ")
-print(string_in)
-type(string_in)
-'''
-#print(tuple_in)
-print(type(tuple_in))
-# starting_tuple = ('python', 'elephant', 'penguin', 1, 2, 3)
-print(f"starting_tuple: {tuple_in}")
-list_ = list(tuple_in)
-print(f"Tuple as list: {list_}")
-'''
+
+# KISS - Keep It Simple Stupid!
+
+tuple_ = [(1, 2, 3, 4), 'str_object', (5, 6), (7, 8, 9), 10, (11, (12, 13))]
+# tuple_ = 'a',
+print(f"tuple_ = {tuple_}")
+
+#####################################################################
+# sub-tuples will be converted to sub-lists, but sub-sub-tuples will not be converted to sub-sub-lists.
+# If it is not desired to convert sub-tuples to sub-lists, the code between these hashed lines should be commented out.
+for i in range(len(tuple_)):
+    if isinstance(tuple_[i], tuple):  # if there are sub-tuples in the main tuple
+        tuple_[i] = list(tuple_[i])  # sublists are converted to tuples
+#####################################################################
+
+list_ = list(tuple_)
+print(f"list_ = {list_}")

@@ -5,16 +5,19 @@ occurrences.
 
 '''
 
-import string
+import string #allows for more advanced string functions
 
 user_string = input("Please enter your string: ")
-words_simple = user_string.split() #not helpful
+words_simple = user_string.split() #depending on punctuation marks in the string, this may not be very good
 
+# stripping out punctuation marks:
 words_raw = [word.strip(string.punctuation) for word in user_string.split()]
+
+#converting all words to lower case so that 'cat', 'Cat' and CAT are treated as the same word:
 words_lower = [word.lower() for word in words_raw]
 
-print(f"Your string separated: {words_raw}")
-print(f"Unique words in string: {set(words_lower)}")
+print(f"Your string separated: {words_raw}")    # more for testing and troubleshooting
+print(f"Unique words in string: {set(words_lower)}")    # useful user information
 
 word_count = ['foo', 0]
 for word in words_lower:
