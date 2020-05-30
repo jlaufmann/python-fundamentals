@@ -17,3 +17,12 @@ Another example: if input is 3, you will output
 Hint: Think of nested for loops
 
 '''
+
+n = int(input("What is your n? "))
+for i in range(1, n+1):
+    print('*' * i)
+
+'''
+This is exactly the same as my solution for lab 04_00_star_loop.py
+I guess for the star_loop I didn't need to ask for the user input.
+'''

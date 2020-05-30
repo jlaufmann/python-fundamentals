@@ -7,3 +7,20 @@ The output of your calculation should therefore look like this:
 
 The sum is: 5050
 '''
+
+int1, int2 = list(map(int, input("Enter two integer numbers separated by a comma: ").split(',')))
+
+if int2 >= int1:
+    intend = int2+1     # we want to include int2 in the list
+    step = 1            # +ve step needed to produce list
+else:
+    intend = int2-1
+    step = -1           # -ve step needed to produce list
+
+# intsum = sum(range(int1, intend, step))   # would be more efficient :)
+
+intsum = 0
+for i in range(int1, intend, step):
+    intsum += i
+
+print(f"The sum is: {intsum}")
