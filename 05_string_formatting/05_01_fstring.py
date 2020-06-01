@@ -17,15 +17,14 @@ famous_quotes = [
     {"full_name": "Nathan Myhrvold", "quote": "Software is a gas; it expands to fill its container."},
     {"full_name": "Alan Bennett", "quote": "Standards are always out of date.  That’s what makes them standards."}
 ]
-
+# Given above is a list of dictionaries nested in a list.
 for i in range(len(famous_quotes)):
     fullname = famous_quotes[i]['full_name'].split()
-    fullname.insert(0, fullname.pop(-1))
-    lastname = fullname[0]
+    fullname.insert(0, fullname.pop(-1)) # moves last name to 1st position
 
-    if len(fullname) == 3:
-        firstname = fullname[1] + " " + fullname[2]
+    if len(fullname) == 3:  # in case there are two first names
+        firstname = f"{fullname[1]} {fullname[2]}"
     else:
         firstname = fullname[1]
 
-    print(f"\"{famous_quotes[i]['quote']}\" - {lastname}, {firstname}\n")
+    print(f"\"{famous_quotes[i]['quote']}\" - {fullname[0]}, {firstname}\n")
