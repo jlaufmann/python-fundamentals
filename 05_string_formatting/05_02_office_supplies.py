@@ -25,3 +25,9 @@ office = [
     {"full_name": "Creed Bratton", "item": "mung beans"},
     {"full_name": "Darryl Philbin", "item": "forklift"},
 ]
+
+#print(f"Name:                    Favorite office supply item:")
+for i in range(len(office)):
+    fullname = office[i]['full_name'].split()
+    newname = f"{fullname[1].upper()}, {fullname[0]}"
+    print(f"{newname: <25}{office[i]['item']}")
