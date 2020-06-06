@@ -9,3 +9,24 @@ Create at least two different objects of this Car class and demonstrate
 changing the objects attributes.
 
 '''
+
+class Car():
+    """ represents a car with model, year of manufacture and max-speed """
+    def __init__(self, model, year, max_speed):
+        self.model = model
+        self.year = year
+        self.max_speed = max_speed
+
+    def __str__(self):
+        return f"Your car is a {self.model} built in {self.year} with max-speed {self.max_speed} kph."
+
+    def accelerate(self):
+        """ increases the max_speed of car by 5 """
+        self.max_speed += 5
+
+toyota = Car('Corolla', 1984, 60)
+ford = Car('Falcon', 1978, 80)
+print(toyota)
+print(ford)
+ford.accelerate()
+print(ford)
