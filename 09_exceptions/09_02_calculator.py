@@ -8,3 +8,16 @@ the script should handle:
 Test it and make sure it does not crash when you enter incorrect values.
 
 '''
+print(f"\n##### QUOTIENT CALCULATOR #####")
+
+while True:
+	try:
+		dividend = float(input(f"\nDividend: "))
+		divisor = float(input(f"Divisor: "))
+		result = dividend / divisor
+	except ZeroDivisionError as zde:
+		print(f"Error: {zde}")
+	except ValueError as ve:
+		print(f"Error: {ve}")
+	else:
+		print(f"Result: {result}")

@@ -8,3 +8,18 @@ only if neither of them applies.
 '''
 
 file_name = 'integers.txt'
+
+with open(file_name, 'r') as fin0:
+	ints = fin0.read().split('\n')
+	# ints = fin0.read()
+	try: 
+		int2 = int(ints[0])
+	except IOError as io_err:
+		print(f"IOError! - {io_err}")
+	except ValueError as v_err:
+		print(f"ValueError! - {v_err}")
+	except Exception as exc:
+		print(f"EXCEPTION! - {exc}")
+	else:
+		print(f"i = {int2}")
+		print(f"i^2 = {int2**2}")
